@@ -11,5 +11,12 @@ function appendOperator(operator) {
 }
 
 function calculate() {
- try {}
-}
+ try {
+ const result = eval(expression);
+ document.getElementById('result').value = result;
+ expression = '';
+ } catch (error) {
+    document.getElementById('result').value = 'Error';
+    expression = '';
+ }
+} 
